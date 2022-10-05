@@ -1,0 +1,124 @@
+body {
+    overflow: hidden;
+    padding: 10px;
+}
+.back {
+    opacity: .05;
+    position: absolute;
+    z-index: -100;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.header {
+    font-size: 22px;
+    text-align: center;
+}
+.header:first-of-type {
+    font-size: 32px;
+}
+
+.bot_option {
+    font-size: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.opt {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rock, .paper, .scissors {
+    transition: .2s ease-in-out;
+}
+
+.rock:hover, .paper:hover, .scissors:hover, .replay_btn:hover {
+    scale: 1.1;
+    box-shadow: 0 0 10px black;
+}
+
+.results {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.score {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+.scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.replay_btn {
+    width: 100px;
+    height: 40px;
+    border: 2px solid black;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.lose {
+    color: #f00;
+    animation: shake 0.5s;
+}
+.win {
+    color: #390;
+    animation: wobble .5s;
+}
+
+@keyframes shake {
+    0%{transform: translateX(15px);}
+    10%{transform: translateX(0);}
+    20%{transform: translateX(-15px);}
+    30%{transform: translateX(0);}
+    40%{transform: translateX(15px);}
+    50%{transform: translateX(0);}
+    60%{transform: translateX(-15px);}
+    70%{transform: translateX(0);}
+    80%{transform: translateX(15px);}
+    90%{transform: translateX(0);}
+    100%{transform: translateX(-15px);}
+}
+
+@keyframes wobble {
+    0%{opacity: 0;}
+    10%{opacity: 1;}
+    20%{opacity: 0;}
+    30%{opacity: 1;}
+    40%{opacity: 0;}
+    50%{opacity: 1;}
+    60%{opacity: 0;}
+    70%{opacity: 1;}
+    80%{opacity: 0;}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}

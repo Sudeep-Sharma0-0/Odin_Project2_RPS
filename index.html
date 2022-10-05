@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Rock Paper Scissors</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="styles/reset.css" rel="stylesheet"/>
+        <link href="styles/style.css" rel="stylesheet"/>
+        <script type="text/javascript" src="scripts/main.js" defer></script>
+        <script type="text/javascript" src="scripts/confetti.js" defer></script>
+    </head>
+    <body>
+        <img alt="background" src="images/background.jpg" class="back"/>
+        <div class="container">
+            <div class="heading">
+                <p class="header">Welcome to Rock, Paper and Scissors</p>
+                <p class="header">Please Choose Your Option!</p>
+            </div>
+
+            <div class="bot_option">Choose one!</div>
+
+            <div class="options">
+                 <div class="rock">
+                     <button onclick="player_option(1)" class="rock opt">
+                         <img alt="Rock" src="images/rock.png" height=100/>
+                     </button>
+                 </div>
+                 <div class="paper">
+                     <button onclick="player_option(2)" class="paper opt">
+                         <img alt="Paper" src="images/paper.png" height=80/>
+                     </button>
+                 </div>
+                 <div class="scissors">
+                     <button onclick="player_option(3)" class="scissors opt">
+                         <img alt="Scissors" src="images/scissors.png" height=80/>
+                     </button>
+                 </div>
+            </div>
+
+            <div class="results">
+                <div class="score">
+                    <div class="player scores">
+                        <p class="player_txt">Your Score</p>
+                        <p class="player_score">0</p>
+                    </div>
+                    <div class="computer scores">
+                        <p class="computer_text">Bot's Score</p>
+                        <p class="computer_score">0</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <p class="result_txt">Game Running!</p>
+                </div>
+                <div onclick="reset()" class="replay">
+                    <button class="replay_btn">Replay</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
